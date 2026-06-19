@@ -106,6 +106,7 @@
         return new Promise((resolve, reject) => {
             Papa.parse(text, {
                 header: true,
+                delimiter: ";",
                 skipEmptyLines: true,
                 complete: r => resolve(r.data),
                 error: err => reject(err)
